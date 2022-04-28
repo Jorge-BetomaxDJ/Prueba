@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "2ecb66fe-c96d-4983-8177-6363459cf4ef",
+		"name": "Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Guardar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"nombre\",\n    \"lastName\": \"apellido\",\n    \"email\": \"sdasdasd@asd.com\",\n    \"phones\": [\n        {\"number\": 123},\n        {\"number\": 123123}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlLocal}}/usuario/guardar",
+					"host": [
+						"{{urlLocal}}"
+					],
+					"path": [
+						"usuario",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlLocal}}/usuario/obtener",
+					"host": [
+						"{{urlLocal}}"
+					],
+					"path": [
+						"usuario",
+						"obtener"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": \"d85432a1-2fea-4063-9523-bf2aa9f0949f\",\n        \"firstName\": \"nombre\",\n        \"lastName\": \"apellido\",\n        \"email\": \"sdasdasd@asd.com\",\n        \"phones\": [\n            {\n                \"id\": \"603c643d-37b6-4bcb-ab2c-240e2c15611d\",\n                \"number\": 123123\n            }\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlLocal}}/usuario/editar",
+					"host": [
+						"{{urlLocal}}"
+					],
+					"path": [
+						"usuario",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"2842d5d1-7d97-4d47-8f04-55f94d449091\",\n    \"firstName\": \"nombre\",\n    \"lastName\": \"apellido\",\n    \"email\": \"sdasdasd@asd.com\",\n    \"phones\": [\n        {\n            \"id\": \"8a8444ed-330f-4a44-aeb6-a4693f811738\",\n            \"number\": 123123\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlLocal}}/usuario/eliminar",
+					"host": [
+						"{{urlLocal}}"
+					],
+					"path": [
+						"usuario",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urlLocal",
+			"value": "hhtp://localhost:8080",
+			"type": "string"
+		}
+	]
+}
